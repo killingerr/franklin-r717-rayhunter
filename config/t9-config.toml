@@ -1,0 +1,24 @@
+# Rayhunter config for Franklin R717 (T-Mobile T9)
+# Tested with rayhunter v0.11.2, root-only (no 1311 downgrade).
+# device=orbic: diag works; display is wrong profile (see docs/DISPLAY.md).
+
+device = "orbic"
+qmdl_store_path = "/cache/rayhunter/qmdl"
+port = 8080
+debug_mode = false
+ui_level = 0
+key_input_mode = 0
+auto_check_updates = false
+min_space_to_start_recording_mb = 1
+min_space_to_continue_recording_mb = 1
+wifi_enabled = false
+
+[analyzers]
+imsi_requested = true
+connection_redirect_2g_downgrade = true
+lte_sib6_and_7_downgrade = true
+null_cipher = true
+nas_null_cipher = true
+incomplete_sib = true
+test_analyzer = false
+diagnostic_analyzer = true

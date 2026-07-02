@@ -1,0 +1,18 @@
+# Rayhunter release binaries (download from EFF releases)
+rayhunter-daemon
+rayhunter-daemon.exe
+
+# Recordings and logs
+*.qmdl
+*.ndjson
+qmdl/
+
+# Secrets and device backups
+*.bin
+.env
+*shadow*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp

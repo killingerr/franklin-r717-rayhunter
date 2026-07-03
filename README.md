@@ -13,16 +13,6 @@ This is **not** an official EFF project. Discuss upstream: [Rayhunter #708](http
 | [riptidewave93/franklin-r717-t9-downgrade](https://github.com/riptidewave93/franklin-r717-t9-downgrade) | Root / downgrade config tooling |
 | [EFForg/rayhunter](https://github.com/EFForg/rayhunter) | Upstream Rayhunter |
 
-## Git hooks (optional)
-
-After clone, enable hooks that strip Cursor agent `Co-authored-by` trailers:
-
-```sh
-git config core.hooksPath .githooks
-```
-
-Also disable **Cursor Settings → Agents → Attribution** on your machine.
-
 ## Quick start
 
 1. Root with **root-only** config ([install guide](docs/INSTALL.md))

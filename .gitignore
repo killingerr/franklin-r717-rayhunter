@@ -16,3 +16,6 @@ qmdl/
 .DS_Store
 Thumbs.db
 *.swp
+
+# Out of scope for this repo (local planning only)
+docs/GUARD.md

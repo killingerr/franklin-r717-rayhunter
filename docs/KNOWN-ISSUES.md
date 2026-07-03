@@ -28,6 +28,14 @@ Binary and config live in `/cache/rayhunter`, not `~`.
 ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.0.1
 ```
 
+## SSH password resets every reboot
+
+`root.sh` from the root-only exploit runs on boot and can force root back to `frk9x07`. After `passwd`, edit `/data/configs/root.sh` and remove or update the `passwd` lines so your chosen SSH password persists.
+
+## Web UI login fails but Wi‑Fi works
+
+Web admin password (`/data/configs/authkeys` and `ITAdminPassword` in `mobileap_cfg.xml`) is separate from the **Wi‑Fi** password (`WPAKey`). The LCD may display the Wi‑Fi key. Try factory-style web passwords (`admin`, `password`) or reset the web password from SSH (update both `authkeys` and `ITAdminPassword`, then reboot).
+
 ## Disk space
 
 Recordings use `/cache` (~60 MB free). Monitor with `df -h /cache`.

@@ -22,7 +22,17 @@ Unofficial manual install. EFF does not ship an R717 installer.
    ssh -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAcceptedAlgorithms=+ssh-rsa root@192.168.0.1
    ```
 
-   Default root password after exploit: `frk9x07` — change with `passwd`.
+   Default root password after exploit: `frk9x07` — change with `passwd`, then edit `/data/configs/root.sh` and **remove or replace** the lines that reset root to `frk9x07` on every boot (otherwise your `passwd` change is lost after reboot).
+
+### Passwords (three different things)
+
+| Login | Typical use |
+|-------|-------------|
+| **Web UI** (`http://192.168.0.1`) | Admin settings — factory default is often `admin` or `password` after restore, not your Wi‑Fi password |
+| **SSH** (`root@192.168.0.1`) | Shell / Rayhunter — starts as `frk9x07` until you `passwd` and fix `root.sh` |
+| **Wi‑Fi** | Joining the hotspot from phone/PC — shown on the LCD if display password is on |
+
+The LCD may show your **Wi‑Fi** password (e.g. `FrankT9!`); that will **not** work on the web login page.
 
 ## 2. Download Rayhunter
 
